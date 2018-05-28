@@ -22,7 +22,7 @@ router.get("/test", (req, res) =>
   })
 );
 
-// @route   GET api/users/register
+// @route   POST api/users/register
 // @desc    Register user
 // @access  Public
 router.post("/register", (req, res) => {
@@ -113,8 +113,8 @@ router.post("/login", (req, res) => {
 
         // Sign Token
         jwt.sign(payload, keys.secretOrKey, {
-            expiresIn: 3600
-          },
+          expiresIn: 3600
+        },
           (err, token) => {
             res.json({
               success: true,
