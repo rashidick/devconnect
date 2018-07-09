@@ -20,9 +20,8 @@ module.exports = function validateExperienceInput(data) {
     errors.from = 'From date field is required';
   }
 
-
   return {
     errors,
     isValid: isEmpty(errors)
-  }
-}
+  };
+};

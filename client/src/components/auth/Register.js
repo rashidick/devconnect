@@ -59,7 +59,7 @@ class Register extends Component {
             <div className="col-md-8 m-auto">
               <h1 className="display-4 text-center">Sign Up</h1>
               <p className="lead text-center">
-                Create your DevConnect account
+                Create your DevConnector account
               </p>
               <form noValidate onSubmit={this.onSubmit}>
                 <TextFieldGroup
@@ -69,35 +69,31 @@ class Register extends Component {
                   onChange={this.onChange}
                   error={errors.name}
                 />
-
                 <TextFieldGroup
-                  type="email"
-                  placeholder="Email Address"
+                  placeholder="Email"
                   name="email"
+                  type="email"
                   value={this.state.email}
                   onChange={this.onChange}
                   error={errors.email}
-                  info="This site uses Gravatar so if you wand a profile image, use a Gravatar email"
+                  info="This site uses Gravatar so if you want a profile image, use a Gravatar email"
                 />
-
                 <TextFieldGroup
-                  type="password"
-                  name="password"
                   placeholder="Password"
+                  name="password"
+                  type="password"
                   value={this.state.password}
                   onChange={this.onChange}
                   error={errors.password}
                 />
-
                 <TextFieldGroup
-                  type="password"
-                  name="password2"
                   placeholder="Confirm Password"
+                  name="password2"
+                  type="password"
                   value={this.state.password2}
                   onChange={this.onChange}
                   error={errors.password2}
                 />
-
                 <input type="submit" className="btn btn-info btn-block mt-4" />
               </form>
             </div>
